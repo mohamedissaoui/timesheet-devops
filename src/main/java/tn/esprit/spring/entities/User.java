@@ -27,6 +27,7 @@ public class User implements Serializable {
 	
 	private String lastName;
 	// test git
+	// 2eme test
 	@Temporal(TemporalType.DATE)
 	private Date dateNaissance;
 	
