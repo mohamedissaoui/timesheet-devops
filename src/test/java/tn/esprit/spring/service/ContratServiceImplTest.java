@@ -29,8 +29,8 @@ import tn.esprit.spring.services.IContratService;
 public class ContratServiceImplTest {
 	@Autowired
 	IContratService cs;
-	@Autowired
-	private ContratRepository repository;
+	
+	
 	private static final Logger L = LogManager.getLogger(ContratServiceImpl.class);
 	
 //	public void testRetrieveAllContrats() {
@@ -53,7 +53,7 @@ public class ContratServiceImplTest {
 				L.info("Le contrat est: "+ c);}
 			L.info("La taille de contrats  ,"+contrats.size());}
 		catch (IllegalArgumentException ex){
-//			assertEquals(1, ex.getMessage());
+		//	assertEquals(1, ex.getMessage());
 		}
 	}
 	

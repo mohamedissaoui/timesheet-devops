@@ -1,3 +1,6 @@
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
+
 //package tn.esprit.spring.services;
 //
 //import java.util.List;
@@ -13,22 +16,21 @@
 //
 //	@Autowired
 //	UserRepository userRepository;
-//
-//	// TODO Logger à ajouter  
+//  private static final Logger L = LogManager.getLogger(UserServiceImpl.class);  
 //	
 //	@Override
 //	public List<User> retrieveAllUsers() { 
 //		List<User> users = null; 
 //		try {
 //	
-//			// TODO Log à ajouter en début de la méthode 
+//			// L.info("In Method retrieveAllusers :") 
 //			users = (List<User>) userRepository.findAll();  
 //			for (User user : users) {
-//				// TODO Log à ajouter pour affiher chaque user dans les logs   
+//				// L.debug("connexion à la DB OK :")   
 //			} 
-//			// TODO Log à ajouter à la fin de la méthode 
+//			// L.info("Out of Method retrieveAllUsers with Sucess"); 
 //		}catch (Exception e) {
-//			// TODO Log à ajouter pour gérer les erreurs 
+//			// L.error("Out of Method retrieveAllUsers with Errors : " +e); 
 //		}
 //
 //		return users;
@@ -37,33 +39,31 @@
 //
 //	@Override
 //	public User addUser(User u) {
-//		// TODO Log à ajouter en début de la méthode 
+//		// L.info("In Method addUsers :"); 
 //		User u_saved = userRepository.save(u); 
-//		// TODO Log à ajouter à la fin de la méthode 
+//		// L.info("Out of Method addUser with Sucess") 
 //		return u_saved; 
 //	}
 //
 //	@Override 
 //	public User updateUser(User u) { 
-//		// TODO Log à ajouter en début de la méthode 
+//		// L.info("In Method updateUser :"); 
 //		User u_saved = userRepository.save(u); 
-//		// TODO Log à ajouter à la fin de la méthode 
+//		// L.info("Out of Method updateUser with Sucess"); 
 //		return u_saved; 
 //	}
 //
 //	@Override
 //	public void deleteUser(String id) {
-//		// TODO Log à ajouter en début de la méthode 
+//		// L.info("In Method deleteUser :"); 
 //		userRepository.deleteById(Long.parseLong(id)); 
-//		// TODO Log à ajouter à la fin de la méthode 
+//		// L.info("Out of Method deleteUser with Sucess"); 
 //	}
 //
 //	@Override
 //	public User retrieveUser(String id) {
-//		// TODO Log à ajouter en début de la méthode 
 //		//User u =  userRepository.findById(Long.parseLong(id)).orElse(null);
 //		User u =  userRepository.findById(Long.parseLong(id)).get(); 
-//		// TODO Log à ajouter à la fin de la méthode 
 //		return u; 
 //	}
 //
